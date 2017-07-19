@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_color"
+    android:id="@+id/activity_capture_finger">
+
+    <include layout="@layout/activity_custom_header"/>
+
+    <TextView
+        android:id="@+id/text_DateOfMonth"
+        android:gravity="center"
+        android:padding="1dp"
+        android:textSize="18sp"
+        android:layout_marginTop="5dp"
+        android:text="Date : 27/04/2017"
+        android:textColor="#494745"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="1dp"
+            android:text="Count : "
+            android:layout_marginLeft="150dp"
+            android:textColor="#494745"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/text_todayCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="1dp"
+            android:text="0"
+            android:textColor="#3a693c"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <Button
+        android:visibility="visible"
+        android:text="Start Capture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorWhite"
+        android:textAllCaps="true"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="36dp"
+        android:layout_marginLeft="36dp"
+        android:id="@+id/btn_capture_finger" />
+
+    <LinearLayout
+        android:id="@+id/rel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/imgFinger"
+            android:layout_width="144dp"
+            android:layout_height="144dp"
+            android:background="@drawable/imagefinger"
+            android:src="@drawable/finger"
+            android:layout_marginTop="12dp"
+            android:layout_gravity="center" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="18dp"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginRight="3dp"
+                android:id="@+id/lblCapturedImg"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="24sp"
+                android:textColor="#121212"
+                android:textStyle="bold"
+                android:id="@+id/lblCaptured"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <include layout="@layout/footer_layout"/>
+
+</LinearLayout>

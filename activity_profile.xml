@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/activity_custom_header"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_padding_8dp"
+            android:layout_marginRight="@dimen/margin_padding_8dp"
+            android:layout_marginTop="@dimen/margin_padding_8dp"
+            android:background="@color/colorWhite"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/margin_padding_8dp"
+            android:paddingRight="@dimen/margin_padding_8dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/margin_padding_8dp"
+                android:paddingRight="@dimen/margin_padding_8dp"
+                android:weightSum="1">
+
+                <RelativeLayout
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:id="@+id/My_Profile_Pic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:onClick="onClickProfilePicture"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_user_profile" />
+
+                   <!-- <ProgressBar
+                        style="?android:attr/progressBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/profilePic_progressBar" />-->
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="277dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorWhite"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/margin_padding_8dp"
+                    android:paddingRight="@dimen/margin_padding_8dp">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_padding_10dp"
+                        android:padding="@dimen/margin_padding_2dp"
+                        android:theme="@style/ThemeBlack">
+
+                        <EditText
+                            android:id="@+id/profile_name"
+                            style="@android:style/TextAppearance.DeviceDefault.Small"
+                            android:layout_width="256dp"
+                            android:layout_height="wrap_content"
+                            android:digits=" ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+                            android:ems="10"
+                            android:hint="@string/text_name"
+                            android:maxLength="20"
+                            android:inputType="text"
+                            android:textColor="@color/colorBlack" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_padding_10dp"
+                        android:padding="@dimen/margin_padding_2dp"
+                        android:theme="@style/ThemeBlack">
+
+                        <EditText
+                            android:id="@+id/profile_mobileNo"
+                            style="@android:style/TextAppearance.DeviceDefault.Small"
+                            android:layout_width="256dp"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:hint="@string/text_mobile_number"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:textColor="@color/colorBlack" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_padding_10dp"
+                android:padding="@dimen/margin_padding_2dp"
+                android:theme="@style/ThemeBlackColor">
+
+
+                <EditText
+                    android:id="@+id/profile_emailID"
+                    style="@android:style/TextAppearance.DeviceDefault.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/text_email"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/textBlackColor" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_padding_10dp"
+                android:padding="@dimen/margin_padding_2dp"
+                android:theme="@style/ThemeBlackColor">
+
+                <EditText
+
+                    android:id="@+id/profile_dateofdirth"
+                    style="@android:style/TextAppearance.DeviceDefault.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="date"
+                    android:hint="@string/text_date_of_birth"
+                    android:textColor="@color/textBlackColor" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_padding_10dp"
+                android:padding="@dimen/margin_padding_2dp"
+                android:theme="@style/ThemeBlackColor">
+
+                <EditText
+
+                    android:id="@+id/edit_country"
+                    style="@android:style/TextAppearance.DeviceDefault.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="date"
+                    android:hint="@string/text_country"
+                    android:textColor="@color/textBlackColor" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <include layout="@layout/horizontal_view_line" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:theme="@style/ThemeBlackColor">
+
+                <EditText
+                    android:id="@+id/edit_state"
+                    style="@android:style/TextAppearance.DeviceDefault.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/text_state"
+                    android:inputType="text"
+                    android:maxLength="20"
+                    android:textColor="@color/textBlackColor" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:theme="@style/ThemeBlackColor">
+
+                <EditText
+                    android:id="@+id/edit_city"
+                    style="@android:style/TextAppearance.DeviceDefault.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/text_city"
+                    android:inputType="text"
+                    android:maxLength="20"
+                    android:textColor="@color/textBlackColor" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_padding_8dp"
+                android:layout_marginRight="@dimen/margin_padding_8dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button_profile_reset"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_marginRight="@dimen/margin_padding_14dp"
+                    android:layout_weight="1"
+                    android:background="#f66639"
+                    android:text="RESET"
+                    android:textColor="@color/colorWhite" />
+
+                <Button
+                    android:id="@+id/button_profile_update"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_marginLeft="@dimen/margin_padding_14dp"
+                    android:layout_weight="1"
+                    android:background="#bd351b"
+                    android:text="UPDATE"
+                    android:textColor="@color/colorWhite" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

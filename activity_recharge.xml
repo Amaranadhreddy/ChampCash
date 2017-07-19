@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_color">
+
+    <include layout="@layout/activity_custom_header_cart" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="@color/colorPrimaryDark"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/layout_earn_champcash"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_weight="1"
+            android:layout_marginRight="0.20dp"
+            android:background="@color/colorPrimaryDark">
+
+            <TextView
+                android:id="@+id/recharge_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_alignParentTop="true"
+                android:background="@color/colorButtonDark"
+                android:gravity="center"
+                android:text="Mobile"
+                android:textColor="@color/colorWhite" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_challenge_champcash"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_weight="1"
+            android:layout_marginRight="0.20dp"
+            android:background="@color/colorPrimaryDark">
+
+            <TextView
+                android:id="@+id/recharge_dth"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_alignParentTop="true"
+                android:background="@color/colorButtonDark"
+                android:gravity="center"
+                android:text="DTH"
+                android:textColor="@color/colorWhite" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_mobile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:id="@+id/groupRecharge_filter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:orientation="horizontal"
+            android:padding="2dp">
+
+            <RadioButton
+                android:id="@+id/prepaid_radio_button"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:checked="false"
+                android:text="@string/text_prepaid"
+                android:textColor="@color/textBlackColor"
+                android:theme="@style/SwitchTheme" />
+
+            <RadioButton
+                android:id="@+id/postpaid_radio_button"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="60dp"
+                android:layout_weight="1.2"
+                android:checked="false"
+                android:text="@string/text_postpaid"
+                android:textColor="@color/textBlackColor"
+                android:theme="@style/SwitchTheme" />
+            <!--android:textColor="@color/colorSlotAvailable"-->
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/layout_prepaid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_padding_10dp"
+                android:padding="@dimen/margin_padding_2dp"
+                android:theme="@style/ThemeBlack">
+
+                <EditText
+                    android:id="@+id/edit_mobile_number"
+                    style="@android:style/TextAppearance.DeviceDefault.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:ems="10"
+                    android:hint="@string/text_mobile_number"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:textColor="@color/colorBlack" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/text_operator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="8dp" />
+
+            <!--<Spinner
+                android:id="@+id/spinner_operator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="8dp"
+                android:spinnerMode="dialog">
+
+            </Spinner>-->
+
+
+            <View xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="0.50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#C6C5C5">
+
+            </View>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_padding_10dp"
+                android:padding="@dimen/margin_padding_2dp"
+                android:theme="@style/ThemeBlack">
+
+                <EditText
+                    android:id="@+id/edit_amount"
+                    style="@android:style/TextAppearance.DeviceDefault.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:ems="10"
+                    android:hint="@string/text_amount"
+                    android:inputType="number"
+                    android:maxLength="20"
+                    android:textColor="@color/colorBlack" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/prepaid_add_to_cart"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1"
+                    android:background="@color/btnCartColor"
+                    android:text="Add To Cart"
+                    android:textColor="@color/colorWhite" />
+
+                <Button
+                    android:id="@+id/btn_proceed_to_recharge"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="1"
+                    android:background="@color/selected_dateBackGround"
+                    android:text="@string/text_proceed_to_recharge"
+                    android:textColor="@color/colorWhite" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_postpaid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_padding_10dp"
+                android:padding="@dimen/margin_padding_2dp"
+                android:theme="@style/ThemeBlack">
+
+                <EditText
+                    android:id="@+id/edit_mobile_number2"
+                    style="@android:style/TextAppearance.DeviceDefault.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:ems="10"
+                    android:hint="@string/text_mobile_number"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:textColor="@color/colorBlack" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <Spinner
+                android:id="@+id/spinner_operator2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="8dp"
+                android:spinnerMode="dialog">
+
+            </Spinner>
+
+
+            <View xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="0.50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#C6C5C5"></View>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_padding_10dp"
+                android:padding="@dimen/margin_padding_2dp"
+                android:theme="@style/ThemeBlack">
+
+                <EditText
+                    android:id="@+id/edit_amount2"
+                    style="@android:style/TextAppearance.DeviceDefault.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:ems="10"
+                    android:hint="@string/text_amount"
+                    android:inputType="number"
+                    android:maxLength="20"
+                    android:textColor="@color/colorBlack" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/postpaid_add_to_cart"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1"
+                    android:background="@color/btnCartColor"
+                    android:text="Add To Cart"
+                    android:textColor="@color/colorWhite" />
+
+                <Button
+                    android:id="@+id/btn_proceed_to_recharge2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="1"
+                    android:background="@color/selected_dateBackGround"
+                    android:text="@string/text_proceed_to_pay_bill"
+                    android:textColor="@color/colorWhite" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_dth"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Spinner
+            android:id="@+id/spinner_operator_dth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:spinnerMode="dialog"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+        </Spinner>
+
+        <View xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="0.50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#C6C5C5">
+
+        </View>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_padding_10dp"
+            android:padding="@dimen/margin_padding_2dp"
+            android:theme="@style/ThemeBlack">
+
+            <EditText
+                android:id="@+id/edit_mobile_number_dth"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/text_registered_mobile_number_consumer_id"
+                android:maxLength="10"
+                android:inputType="number"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/colorBlack" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_padding_10dp"
+            android:padding="@dimen/margin_padding_2dp"
+            android:theme="@style/ThemeBlack">
+
+            <EditText
+                android:id="@+id/edit_amount_dth"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/text_amount"
+                android:maxLength="20"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:inputType="number"
+                android:textColor="@color/colorBlack" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/dth_add_to_cart"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="16dp"
+                android:layout_weight="1"
+                android:background="@color/btnCartColor"
+                android:text="Add To Cart"
+                android:textColor="@color/colorWhite" />
+
+            <Button
+                android:id="@+id/btn_proceed_to_recharge_dth"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:background="@color/selected_dateBackGround"
+                android:text="@string/text_proceed_to_recharge"
+                android:textColor="@color/colorWhite" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    </LinearLayout>
+
+    <include layout="@layout/footer_layout"/>
+
+</LinearLayout>

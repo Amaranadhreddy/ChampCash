@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:background="@color/colorPrimary"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <ImageView
+        android:id="@+id/header_back"
+        android:layout_width="36dp"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        android:src="@mipmap/ic_arrow_back_white_24dp" />
+
+    <!--<ImageView
+        android:id="@+id/header_back_home"
+        android:layout_width="36dp"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        android:src="@mipmap/ic_home_white_24dp" />-->
+
+    <TextView
+        android:id="@+id/header_activity_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/colorWhite" />
+
+
+
+        <RelativeLayout
+            android:id="@+id/icon_cart"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/cart_img"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:gravity="center"
+                android:padding="2dp"
+                android:src="@mipmap/ic_cart" />
+
+            <TextView
+                android:id="@+id/tms_cart_count"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@mipmap/ic_cart_circle"
+                android:gravity="center"
+                android:padding="1dp"
+                android:text="0"
+                android:textColor="@color/colorWhite"
+                android:textSize="10sp" />
+
+
+        </RelativeLayout>
+
+
+
+    <!-- <RelativeLayout
+
+         android:layout_width="32dp"
+         android:padding="1dp"
+         android:background="@mipmap/ic_cart"
+         android:layout_height="32dp">
+
+         <TextView
+             android:layout_width="20dp"
+             android:layout_height="20dp"
+             android:text="0"
+             android:padding="1dp"
+             android:textSize="10sp"
+             android:textColor="@color/colorWhite"
+             android:gravity="center"
+
+             android:background="@mipmap/ic_circle_green"
+             android:layout_alignParentTop="true"
+             android:layout_alignParentRight="true"
+            />
+
+
+     </RelativeLayout>-->
+</LinearLayout>
